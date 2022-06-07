@@ -9,7 +9,7 @@ app.use(cors());
 
  app.use(express.json());
 
- app.use("/",hairController)
+ app.use("/hair",hairController)
 
 
  module.exports=app;
