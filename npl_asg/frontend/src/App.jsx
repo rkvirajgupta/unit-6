@@ -7,13 +7,17 @@ import { useSearchParams } from "react-router-dom";
 function App() {
 let [searchParams, setSearchParams] = useSearchParams();
 const [data,setData] = useState([])
+const [total_page,setTotal_page] = useState(0)
 const [page,setPage] = useState(searchParams.get('page') || 1)
 const [category,setCategory] = useState(searchParams.get('category') || '')
 const [sort,setSort] = useState(searchParams.get('sort') || '')
 const [color,setColor] = useState(searchParams.get('color') || '')
-
+const arr = new Array(total_page).fill(0);
 useEffect(()=>{
-  axios.get(`http://localhost:4700/hair?color=${color}&category=${category}&sort=${sort}&page=${page}`).then((res)=>setData(res.data.hair))
+  axios.get(`http://localhost:4700/hair?color=${color}&category=${category}&sort=${sort}&page=${page}`).then((res)=>{
+    setData(res.data.hair) 
+    setTotal_page(res.data.total_page)
+  }).catch((err)=>console.log(err))
   setSearchParams({page,category,sort,color})
 },[page,category,sort,color])
 
@@ -40,29 +44,25 @@ useEffect(()=>{
         <option value="5 more color">5 more color</option>
       </select>
     </div>
-    <div className="App">
+    <div id='card'>
       {data.map((e)=>(
-        <div id='card' key={e._id}>
+        <div  key={e._id}>
          
-         <img src={e.image_url} alt="" />
-         
+         <div ><img src={e.image_url} alt="" />         
          <p>{e.brandname}</p>
           <p>{e.productName}</p>
-          <p>₹ {e.price}</p>
+          <p>₹ {e.price}</p></div>
          
 
         </div>
       ))}
     </div>
     <div id="btns">
-      <button onClick={()=>setPage(page-1)}>PREV</button>
-      <button onClick={()=>setPage(1)}>1</button>
-      <button onClick={()=>setPage(2)}>2</button>
-      <button onClick={()=>setPage(3)}>3</button>
-      <button onClick={()=>setPage(4)}>4</button>
-      <button onClick={()=>setPage(5)}>5</button>
-      <button onClick={()=>setPage(page+1)}>NEXT</button>
-    </div>
+    <button onClick={()=>setPage(page-1)}>PREV</button>
+      { arr.map((e,i)=>(
+        <button key={i} onClick={()=>setPage(i+1)}>{i+1}</button>
+      )) }
+      <button onClick={()=>setPage(page+1)}>NEXT</button>   </div>
     </>
   )
 }
