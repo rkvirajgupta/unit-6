@@ -42,7 +42,9 @@ try {
      let total_page = await Hair.find(options).countDocuments();
     
        total_page = Math.ceil(total_page/item);
+
      return res.status(200).send({hair,total_page});
+     
 } catch (error) {
     return res.status(501).send({message:error.message})
 }

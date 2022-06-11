@@ -16,9 +16,13 @@ const arr = new Array(total_page).fill(0);
 useEffect(()=>{
   axios.get(`http://localhost:4700/hair?color=${color}&category=${category}&sort=${sort}&page=${page}`).then((res)=>{
     setData(res.data.hair) 
+
     setTotal_page(res.data.total_page)
+
   }).catch((err)=>console.log(err))
+
   setSearchParams({page,category,sort,color})
+  
 },[page,category,sort,color])
 
 

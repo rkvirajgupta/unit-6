@@ -9,11 +9,7 @@ const userSchema = new mongoose.Schema(
     gender: { type: String, required: false, default: "Male" },
     age: { type: Number, required: true },
     birth_date: { type: Date, required: true },
-    profile_pic: [{ type: String }],
-  },
-  {
-    versionKey: false,
-    timestamps: true,
+    profile_picture: [{ type: String }],
   }
 );
 

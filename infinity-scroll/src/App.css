@@ -1,12 +1,10 @@
-
-#container{
-  border: 1px solid red;
-  height: 500px;
-  width: 500px;
+.App{
+  text-align: center;
+}
+#maindiv{
+  border: 2px solid black;
+  height: 400px;
+  width: 400px;
   margin: 50px auto;
   overflow: scroll;
-}
-
-h1{
-  text-align: center;
 }

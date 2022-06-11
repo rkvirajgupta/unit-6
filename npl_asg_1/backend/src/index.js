@@ -14,11 +14,5 @@ app.use('/category', CategoryController)
 app.use('/brand', BrandController)
 app.use('/review', ReviewController)
 
-app.listen(5000,async()=>{
-    try {
-        await connect();
-        console.log('Listening on Port 5000')
-    } catch (error) {
-        console.log(error)
-    }
-})
+
+module.exports = app;
