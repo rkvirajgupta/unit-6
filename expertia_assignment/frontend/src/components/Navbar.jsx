@@ -1,16 +1,15 @@
 import {Link} from "react-router-dom"
 
+import  './Navbar.css'
 
 export const Navbar=()=>{
 
 
     return (
-       <div>
-         <h1>Job Searching Portal</h1>
-          <Link to={"/"}>Home</Link>
+       <div id='nav'>
+         <h3 id='navh1'>Job Searching Portal</h3>
+          <Link to={"/"} id='navlink'>Home</Link>
          
-          
-
        </div>
     )
 }

@@ -1,6 +1,7 @@
 import { useEffect, useState, useContext } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
+import './jobDetails.css'
 
 export const JobDetails = () => {
 	const { id } = useParams();
@@ -13,7 +14,7 @@ export const JobDetails = () => {
 	}, []);
 
 	const fetch = async () => {
-		const { data } = await axios(`http://localhost:4700/job/${id}`);
+		const { data } = await axios(`https://expertia-asg.herokuapp.com/job/${id}`);
 		setE(data);
 	};
 
@@ -27,7 +28,7 @@ export const JobDetails = () => {
         <p>Job Location:{e.location}</p> 
        <p>Job Sallary:{e.salary}</p>
        <p>Job Description:{e.description}</p>
-       <button onClick={()=>{
+       <button id='btn' onClick={()=>{
         alert('you are successfully applied')
         setStatus(true)
        }}>{status!==true ? "Apply Now":"Applied"}</button>

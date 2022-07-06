@@ -1,1 +1,20 @@
-{height:"70px",position:"fixed" ,textAlign:"center" ,border:"1px solid red" ,width:"100%",background:"yellowgreen"}}
+
+#nav {
+   
+    display:flex;
+    align-items: center;
+    width:40%;
+    justify-content: space-around;
+    margin :auto;
+    
+
+}
+#navh1 {
+
+    color:red;
+
+}
+#navlink {
+    color:red;
+    font-weight: bolder;
+}
