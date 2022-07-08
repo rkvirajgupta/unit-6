@@ -1,0 +1,42 @@
+#maindiv {
+    display: flex;
+    /* border-bottom: 1px solid grey; */
+    justify-content: center;
+    width:100%;
+
+}
+#maindiv > div >img {
+    /* border: 1px solid red; */
+    border-radius: 50%;
+    width:15%;
+    padding: 5%;
+}
+#maindivsubdiv1{
+    display: flex;
+    border-bottom: 1px solid grey;
+    width:40%;
+
+}
+#maindivsubdiv1>p{
+    font-size: 10px;
+    padding-top: 2%;
+}
+#maindivsubdiv2{
+    display: flex;
+    border-bottom: 1px solid grey;
+
+    width:27%;
+}
+#maindivsubdiv2>p{
+    font-size: 10px;
+    padding: 5%;
+}
+#main1divsubdiv1 >img {
+    /* border: 1px solid red; */
+    border-radius: 50%;
+    width:25%;
+    margin-right: 5%;
+}
+#main1divsubdiv1{
+    display: flex;
+}
