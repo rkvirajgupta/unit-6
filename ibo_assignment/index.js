@@ -106,3 +106,28 @@ const getUniquePrducts = (listOfProducts) => {
 };
 
 console.log(getUniquePrducts(listOfProducts));
+
+
+//OR
+
+// const getUniquePrducts = (listOfProducts) => {
+//   let UniquePrductsList = [];
+//   listOfProducts.map((e)=>{
+// let flag = true;
+
+// UniquePrductsList.map((e)=>{
+//   if(e.productName===e.productName){
+//     e.quantity+=e.quantity;
+//     flag = false;
+//   }
+// })
+// if(flag){
+//   UniquePrductsList.push(e)
+// }
+
+//   })
+  
+//   return UniquePrductsList;
+// };
+
+// console.log(getUniquePrducts(listOfProducts));
