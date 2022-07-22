@@ -1,0 +1,48 @@
+
+
+.bodyofenquire{
+    /* background-color: teal; */
+    width:55%;
+    /* border:1px solid red; */
+
+}
+#qwe{
+    /* display: flex; */
+    /* justify-content: space-around; */
+    /* border:1px solid red; */
+
+
+}
+
+#dataset {
+    display :flex;
+    justify-content: space-around;
+
+
+}
+#yio {
+    display: flex;
+    justify-content: space-around;
+}
+#dataset>p{
+    text-align: left;
+    /* border:1px solid red; */
+    font-weight: bolder;
+}
+.three{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 15%;
+    width:25%;
+
+}
+#reacticon {
+    width :60%;
+    height:80px;
+    /* border:1px solid red; */
+}
+#bluetacker{
+    color:blue
+}
+.sivian{
+    background-color:rgb(214,215,219);
+}
